@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset='utf-8'>
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <!--[if lt IE 9]>
+    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+    <title>LevelEditor</title>
+
+  		<script type="text/javascript">
+			document.write("\<script src='//ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js' type='text/javascript'>\<\/script>");
+		</script>
+		<script src="js/swfobject.js"></script>
+		<script type="text/javascript" language="javascript">
+			
+
+			var flashvars = {
+			};
+			var params = {
+				menu: "false",
+				scale: "noScale",
+				allowFullscreen: "true",
+				allowScriptAccess: "always",
+				bgcolor: "",
+				wmode: "direct" // can cause issues with FP settings & webcam
+			};
+			var attributes = {
+				id:"WebInterface"
+			};
+			swfobject.embedSWF(
+				"WebInterface.swf", 
+				"altContent", "0px", "0px", "10.0.0", 
+				"expressInstall.swf", 
+				flashvars, params, attributes);
+			
+			function getFlashMovieObject(movieName){
+				if (window.document[movieName]){
+					return window.document[movieName];
+				}
+				if (navigator.appName.indexOf("Microsoft Internet")==-1){
+					if (document.embeds && document.embeds[movieName])
+						return document.embeds[movieName];
+				}
+				else{
+					return document.getElementById(movieName);
+				}
+			}
+			
+			document.makeRequest = function makeRequest(method,url,data){
+				var flashMovie=getFlashMovieObject("WebInterface");
+				flashMovie.makeRequest(method,url,data);
+			}
+			
+			
+		</script>
+		<script>
+		function prepareList() {
+		  $('#expList').find('li:has(ul)')
+			.click( function(event) {
+				if (this == event.target) {
+					$(this).toggleClass('expanded');
+					$(this).children('ul').toggle('medium');
+				}
+				return false;
+			})
+			.addClass('collapsed')
+			.children('ul').hide();
+		  };
+		 
+		  $(document).ready( function() {
+			  prepareList()
+		  });
+		  </script>
+	</head>
+	
+
+	<body>
+		<div align="center" id="embed-io.github.naxxol.le.GwtDefinition"></div>
+		<script type="text/javascript" src="io.github.naxxol.le.GwtDefinition/io.github.naxxol.le.GwtDefinition.nocache.js"></script>
+	</body>
+	
+	<script>
+		function handleMouseDown(evt) {
+		  evt.preventDefault();
+		  evt.stopPropagation();
+		  evt.target.style.cursor = 'default';
+		}
+		
+		function handleMouseUp(evt) {
+		  evt.preventDefault();
+		  evt.stopPropagation();
+		  evt.target.style.cursor = '';
+		}
+		
+		document.getElementById('embed-io.github.naxxol.le.GwtDefinition').addEventListener('mousedown', handleMouseDown, false);
+		document.getElementById('embed-io.github.naxxol.le.GwtDefinition').addEventListener('mouseup', handleMouseUp, false);
+		
+				window.addEventListener("keydown", function(e) {
+			// tab, space (32) and arrow keys
+			if([9, 37, 38, 39, 40].indexOf(e.keyCode) > -1) {
+				e.preventDefault();
+			}
+		}, false);
+	</script>
+</html>
