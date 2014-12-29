@@ -1,4 +1,4 @@
-gravity=1&note=&items=1`2`3`4`5`6`7`8`9&token=&live=0&data=m3`bbbbdd`444;335;11,1;0;12,1;0;13,1;0;14```````-1`13234;10103;t;Hey#44 if you want to load a
+user_id=0&credits=&title=Dummy Level&data=m3`bbbbdd`444;335;11,1;0;12,1;0;13,1;0;14```````-1`13234;10103;t;Hey#44 if you want to load a
 different level#44 you need to use a
 program like Fiddler2 or Charles!
-If you need help contact Firebird on JV.;0;102;105```&hasPass=0&song=&max_time=120&gameMode=race&credits=&hash=c394e2bee5aecb430a63b73f663e9cca&min_level=0&passHash=&cowboyChance=5&title=Hi&rand=4703265
+If you need help contact Firebird on JV.;0;102;105```&time=1318959839&note=&min_level=0&song=4&gravity=1.0&max_time=999&live=0&level_id=3711604&items=Laser Gun4a06deb9ed0ea7316922bddfea0b580a
